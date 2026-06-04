@@ -17,6 +17,8 @@ const description =
   Astro.props.description ??
   Astro.props.frontmatter?.description ??
   'マクロデータサイエンスの世界観を対話型図で再構築する補助ウェブサイト';
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const withBase = (path: string) => `${basePath}${path}`;
 ---
 
 <!doctype html>
@@ -31,11 +33,11 @@ const description =
     <div class="site-shell">
       <header class="site-header">
         <div class="site-header__inner">
-          <a class="site-brand" href="/">Macro Data Science Lab</a>
+          <a class="site-brand" href={withBase('/')}>Macro Data Science Lab</a>
           <nav class="site-nav" aria-label="主要ナビゲーション">
-            <a href="/">トップ</a>
-            <a href="/01-random-variables-as-data/">第1回</a>
-            <a href="/02-sampling-distribution/">第2回</a>
+            <a href={withBase('/')}>トップ</a>
+            <a href={withBase('/01-random-variables-as-data/')}>第1回</a>
+            <a href={withBase('/02-sampling-distribution/')}>第2回</a>
           </nav>
         </div>
       </header>
