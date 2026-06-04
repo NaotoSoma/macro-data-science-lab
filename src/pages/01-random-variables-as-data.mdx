@@ -1,0 +1,40 @@
+---
+layout: ../layouts/CourseLayout.astro
+title: 第1回：データはどこから来るのか
+description: 確率変数が実現値になり、データ表ができる瞬間を対話型図で理解する
+author: Naoto Soma
+---
+
+import RandomVariableRealizationWidget from '../components/widgets/RandomVariableRealizationWidget';
+import JointDistributionWidget from '../components/widgets/JointDistributionWidget';
+
+<section className="hero">
+  <p className="eyebrow">Lecture 01</p>
+  <h1>データはどこから来るのか</h1>
+  <p>
+    データとは、確率変数が実現した値を表に並べたものです。まず操作して、<code>X_i</code> が <code>x_i</code> に変わる瞬間を体感しましょう。
+  </p>
+</section>
+
+<div className="callout">
+  <strong>今回の目標：「データは確率変数の実現値である」という（頻度論的）統計学の世界観に慣れましょう。</strong>
+</div>
+
+<RandomVariableRealizationWidget client:load />
+
+<section className="page-section">
+  <h2>次に、2つの変数を同時に見る</h2>
+  <p>
+    所得と消費、価格と数量のような2変量データでは、<code>(X_i, Y_i)</code> というペアが同時に実現し、同じ行に入ります。
+  </p>
+</section>
+
+<JointDistributionWidget client:only="react" />
+
+<section className="page-section">
+  <h2>確認</h2>
+  <ol className="question-list">
+    <li>実現前の <code>X_i</code> と、実現後の <code>x_i</code> は何が違うでしょうか。</li>
+    <li>サンプルサイズ <code>N</code> を大きくすると、実現値の集まりは何に近づいて見えるでしょうか。</li>
+  </ol>
+</section>

@@ -1,0 +1,30 @@
+---
+layout: ../layouts/CourseLayout.astro
+title: 第2回：標本分布を理解する
+description: 同じ母集団から同じサンプルサイズの標本を何度も取り、標本平均の分布を対話型図で理解する
+author: Naoto Soma
+---
+
+import RepeatedSamplingWidget from '../components/widgets/RepeatedSamplingWidget';
+
+<section className="hero">
+  <p className="eyebrow">Lecture 02</p>
+  <h1>標本分布を理解する</h1>
+  <p>
+    同じ母集団から、同じ <code>N</code> の標本を何度も取ると何が見えるでしょうか。
+  </p>
+</section>
+
+<div className="callout">
+  <strong>今回の目標：標本は1回ごとに揺れるが、同じ方法で何度も標本を取ると、標本平均そのものにも分布が見えてくることに慣れましょう。</strong>
+</div>
+
+<RepeatedSamplingWidget client:load />
+
+<section className="page-section">
+  <h2>確認</h2>
+  <ol className="question-list">
+    <li>同じ <code>N</code> で標本を取り直すと、データ表はなぜ毎回変わるのでしょうか。</li>
+    <li>標本平均を何度も集めると、何の分布が見えてくるのでしょうか。</li>
+  </ol>
+</section>
