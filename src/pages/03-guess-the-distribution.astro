@@ -1,0 +1,22 @@
+---
+import CourseLayout from '../layouts/CourseLayout.astro';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const redirectPath = `${basePath}/02-guess-the-distribution/`;
+---
+
+<CourseLayout
+  title="第2回：点から分布を読むゲーム"
+  description="このページは第2回へ移動しました"
+>
+  <script is:inline define:vars={{ redirectPath }}>
+    window.location.replace(redirectPath);
+  </script>
+  <section class="hero">
+    <p class="eyebrow">Moved</p>
+    <h1>点から分布を読むゲームは第2回へ移動しました</h1>
+    <p>
+      新しいページは <a href={redirectPath}>第2回：点から分布を読むゲーム</a> です。
+    </p>
+  </section>
+</CourseLayout>

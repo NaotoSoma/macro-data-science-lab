@@ -1,62 +1,34 @@
-# Macro Data Science Lab
+# Distribution Guessing Game Codex Update
 
-経済学部向けデータサイエンス授業の companion website（補助ウェブサイト）試作です。本文で講義を再現するのではなく、授業で伝えた世界観を interactive widget（対話型部品）として再構築します。
+このフォルダは、第2回と現在の第3回の間に「第3回：点から分布を読むゲーム」を追加するためのCodex向け文書更新セットである。
 
-## 目的
-
-最初の試作ページでは、次の直観を学生に見せます。
-
-> データとは、確率変数が実現した値を表に並べたものである。
-
-単変量の確率変数では、砂粒が分布の上から落ち、`X_i` が `x_i` に変わる瞬間を見せます。2変量の確率変数では、同時分布の山または等高線から、`(X_i, Y_i)` が `(x_i, y_i)` に変わる瞬間を見せます。
-
-## 技術構成
-
-- Astro（静的サイト生成フレームワーク）
-- MDX（Markdownに部品を埋め込める形式）
-- React（UI部品ライブラリ）
-- TypeScript（型付きJavaScript）
-- SVG（2次元ベクター描画）
-- React Three Fiber（React用Three.jsレンダラー）
-- Three.js（3次元描画ライブラリ）
-
-## セットアップ
-
-```bash
-npm install
-npm run dev
-```
-
-開発サーバーが起動したら、次を開きます。
+## Contents
 
 ```text
-http://localhost:4321/01-random-variables-as-data/
+AGENTS.md
+
+docs/
+  PROJECT_SPEC.md
+  IMPLEMENTATION_PLAN.md
+  CODEX_TASKS.md
+  INTERACTION_SPEC_DISTRIBUTION_GUESSING_GAME.md
+  FILE_CHANGE_PLAN_DISTRIBUTION_GUESSING_GAME.md
+  CODEX_PROMPT_ADD_DISTRIBUTION_GUESSING_GAME.md
+
+page-template/
+  03-guess-the-distribution.mdx
 ```
 
-## 主要ファイル
+## How to apply
 
-```text
-AGENTS.md                                      Codex向けの作業指示
-README.md                                      このファイル
-docs/PROJECT_SPEC.md                          全体仕様
-docs/INTERACTION_SPEC_FIRST_PAGE.md           第1ページの対話仕様
-docs/IMPLEMENTATION_PLAN.md                   実装計画
-docs/CONTENT_STYLE_GUIDE.md                   教材表現の方針
-docs/CODEX_TASKS.md                           Codexに投げる作業単位
-src/pages/01-random-variables-as-data.mdx      最初の試作ページ
-src/components/widgets/RandomVariableRealizationWidget.tsx
-src/components/widgets/JointDistributionWidget.tsx
-src/lib/probability/random.ts                  乱数・分布ロジック
-src/lib/visualization/scales.ts                表示用ユーティリティ
-```
+1. 現在の作業フォルダをバックアップする。
+2. `AGENTS.md` はプロジェクトルートの同名ファイルに置く。
+3. `docs/` 以下のファイルはプロジェクトの `docs/` フォルダへ置く。
+4. `page-template/03-guess-the-distribution.mdx` は、Codexが実装する際のMDX（Markdownに部品を埋め込める形式）ページの雛形として使う。
+5. Codexには `docs/CODEX_PROMPT_ADD_DISTRIBUTION_GUESSING_GAME.md` のプロンプトを渡す。
 
-## 現時点の試作範囲
+## Notes
 
-- 単変量の確率変数が実現値になり、表が埋まる表現
-- 2変量の同時分布からペアの実現値が発生し、表が埋まる表現
-- 同時分布の 3D surface（3次元曲面）モードと contour（等高線）モードの切り替え
-- サンプルサイズ、乱数 seed（種）、分布、相関の操作
-
-## 注意
-
-このフォルダはCodexに読ませるための試作土台です。`package.json` は依存関係を `latest` にしています。初回に `npm install` した後、生成された lock file（固定された依存関係ファイル）をコミットし、それ以後はCodexに依存関係を不用意に更新させないでください。
+- 既存の第1回・第2回実装を壊さない前提で書いている。
+- 既存の第3回ページがある場合、未公開なら第4回へ繰り下げる方針を推奨する。
+- 公開済みURLの可能性がある場合は、既存ページを壊さず新ページだけを追加する。

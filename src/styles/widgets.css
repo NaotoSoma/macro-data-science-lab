@@ -179,8 +179,17 @@
 .contour-svg {
   display: block;
   width: 100%;
-  height: auto;
   background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.density-svg {
+  aspect-ratio: 680 / 270;
+  min-height: 260px;
+}
+
+.contour-svg {
+  aspect-ratio: 1;
+  min-height: 320px;
 }
 
 .axis-line {
@@ -226,6 +235,99 @@
 .sample-dot--joint {
   fill: #1d4ed8;
   opacity: 0.75;
+}
+
+.distribution-game__svg {
+  aspect-ratio: 720 / 270;
+  min-height: 250px;
+}
+
+.distribution-game__histogram {
+  fill: rgb(29 78 216 / 0.14);
+}
+
+.distribution-game__data-dot {
+  fill: var(--text);
+  opacity: 0.68;
+}
+
+.distribution-game__guess-line {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 3;
+}
+
+.distribution-game__true-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-dasharray: 8 6;
+}
+
+.distribution-game__kde-line {
+  fill: none;
+  stroke: #0f766e;
+  stroke-width: 2.4;
+  stroke-dasharray: 2 5;
+}
+
+.distribution-game__spread-band {
+  fill: rgb(29 78 216 / 0.1);
+}
+
+.distribution-game__center-line {
+  stroke: var(--primary);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 5;
+}
+
+.distribution-game__side-panel {
+  min-height: 100%;
+}
+
+.distribution-game__result {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+}
+
+.distribution-game__result p {
+  margin: 0;
+}
+
+.distribution-game__comparison {
+  display: grid;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  padding: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.distribution-game__comparison-row {
+  display: grid;
+  grid-template-columns: minmax(3.5rem, 0.9fr) repeat(3, minmax(3rem, 1fr));
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.distribution-game__comparison-row span:not(:first-child) {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.distribution-game__comparison-row--header {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.distribution-game__comment {
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent-weak);
+  color: var(--text);
+  padding: 0.85rem 1rem;
 }
 
 .mean-line {

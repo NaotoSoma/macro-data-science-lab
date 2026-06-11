@@ -1,0 +1,32 @@
+---
+layout: ../layouts/CourseLayout.astro
+title: 第2回：点から分布を読むゲーム
+description: データ点から背後にある確率分布の形を推測する
+author: Naoto Soma
+---
+
+import DistributionGuessingGameWidget from '../components/widgets/DistributionGuessingGameWidget';
+
+<section className="hero">
+  <p className="eyebrow">Lecture 02</p>
+  <h1>点から分布を読むゲーム</h1>
+  <p>
+    目の前にある点は、背後にある確率分布から実現した値です。このページでは、点だけを見て、どんな分布から来たのかを推測します。
+  </p>
+</section>
+
+<div className="callout">
+  <strong>今回の目標：データから「真実」を直接読むのではなく、背後にありそうな分布を考える感覚に慣れましょう。</strong>
+</div>
+
+<DistributionGuessingGameWidget client:load />
+
+<section className="page-section">
+  <h2>確認</h2>
+  <ol className="question-list">
+    <li><code>N</code> が小さいとき、なぜ真の分布と違う形に見えることがあるでしょうか。</li>
+    <li>ヒストグラムの bin（階級）数を変えると、何が変わるでしょうか。</li>
+    <li>KDE（カーネル密度推定）の bandwidth（帯域幅）を変えると、何が変わるでしょうか。</li>
+    <li>データから分布を「当てる」ことと、データから分布を「推測する」ことは何が違うでしょうか。</li>
+  </ol>
+</section>

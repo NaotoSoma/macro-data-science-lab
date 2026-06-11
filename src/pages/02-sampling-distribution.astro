@@ -1,0 +1,22 @@
+---
+import CourseLayout from '../layouts/CourseLayout.astro';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+const redirectPath = `${basePath}/03-sampling-distribution/`;
+---
+
+<CourseLayout
+  title="第3回：標本分布を理解する"
+  description="このページは第3回へ移動しました"
+>
+  <script is:inline define:vars={{ redirectPath }}>
+    window.location.replace(redirectPath);
+  </script>
+  <section class="hero">
+    <p class="eyebrow">Moved</p>
+    <h1>標本分布のページは第3回へ移動しました</h1>
+    <p>
+      新しいページは <a href={redirectPath}>第3回：標本分布を理解する</a> です。
+    </p>
+  </section>
+</CourseLayout>
