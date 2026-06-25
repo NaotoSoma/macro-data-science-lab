@@ -330,6 +330,221 @@
   padding: 0.85rem 1rem;
 }
 
+.segmented-control--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.segmented-control--three button {
+  min-width: 0;
+  white-space: normal;
+}
+
+.estimator-quality {
+  display: grid;
+  gap: 1rem;
+}
+
+.estimator-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+
+.estimator-options__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.estimator-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 0.3rem 0.62rem;
+}
+
+.estimator-options label span {
+  display: grid;
+  gap: 0.12rem;
+  line-height: 1.18;
+}
+
+.estimator-options label small {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.estimator-options input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.estimator-formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.65rem;
+}
+
+.estimator-formula-card {
+  display: grid;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  padding: 0.7rem 0.8rem;
+}
+
+.estimator-formula-card__name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.estimator-formula-card__name i {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  flex: 0 0 auto;
+}
+
+.estimator-formula-card__formula {
+  color: var(--text);
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.estimator-svg {
+  display: block;
+  width: 100%;
+  min-height: 260px;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.estimator-svg--sample {
+  min-height: 170px;
+}
+
+.estimator-target-line {
+  stroke: #111827;
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+}
+
+.estimator-shift-line {
+  stroke: rgb(190 18 60 / 0.56);
+  stroke-width: 2;
+  stroke-dasharray: 3 6;
+}
+
+.estimator-label {
+  fill: #334155;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.estimator-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.8rem;
+  padding: 0 1rem 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.estimator-legend span,
+.estimator-property-card__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+}
+
+.estimator-legend i,
+.estimator-property-card__title i {
+  width: 0.78rem;
+  height: 0.78rem;
+  border-radius: 999px;
+  flex: 0 0 auto;
+}
+
+.estimator-compare-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.estimator-single-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.table-muted {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.estimator-property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.85rem;
+}
+
+.estimator-property-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 0.95rem;
+}
+
+.estimator-property-card p {
+  margin: 0.55rem 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.estimator-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.estimator-badges span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.22rem 0.52rem;
+}
+
+.estimator-badges span.is-good {
+  border-color: rgb(15 118 110 / 0.24);
+  background: rgb(15 118 110 / 0.1);
+  color: #0f766e;
+}
+
+.estimator-badges span.is-weak {
+  border-color: rgb(190 18 60 / 0.22);
+  background: rgb(190 18 60 / 0.08);
+  color: #be123c;
+}
+
 .mean-line {
   stroke: var(--accent);
   stroke-width: 2;
@@ -428,6 +643,16 @@
   .widget__header,
   .widget__body--two-columns {
     grid-template-columns: 1fr;
+  }
+
+  .segmented-control--three {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    min-width: 0;
+  }
+
+  .segmented-control--three button {
+    min-width: 0;
   }
 
   .surface-canvas-wrap {

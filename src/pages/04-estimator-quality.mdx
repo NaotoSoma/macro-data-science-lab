@@ -1,0 +1,35 @@
+---
+layout: ../layouts/CourseLayout.astro
+title: 第4回：よい平均の当て方はどれか
+description: E[X]を推定する4つの方法を比べ、不偏性と一致性の違いを操作しながら理解するページ
+author: Naoto Soma
+---
+
+import EstimatorQualityWidget from '../components/widgets/EstimatorQualityWidget';
+
+<section className="lesson-hero">
+  <p className="eyebrow">Lesson 04</p>
+  <h1>第4回：よい平均の当て方はどれか</h1>
+  <p>
+    母集団の期待値 E[X] は見えません。手元の標本から、その見えない値をどう当てるとよいのでしょうか。
+  </p>
+</section>
+
+<section className="callout">
+  <p>
+    <strong>
+      今回の目標：不偏性は「標本を取り直したときの中心」、一致性は「Nを大きくしたときの動き」として見ることに慣れましょう。
+    </strong>
+  </p>
+</section>
+
+<EstimatorQualityWidget client:load />
+
+<section className="page-section">
+  <h2>確認</h2>
+  <ol>
+    <li>標本を取り直したとき、推定値の分布の中心が E[X] に近いとはどういうことでしょうか。</li>
+    <li>Nを大きくしたとき、推定値が E[X] の近くに安定するとはどういうことでしょうか。</li>
+    <li>「最初の1個だけ」と「標本平均」は、どちらも不偏なのに何が違うのでしょうか。</li>
+  </ol>
+</section>

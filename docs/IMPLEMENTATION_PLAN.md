@@ -238,3 +238,41 @@ src/lib/probability/distributionGuessing.ts
 - `npm run check` と `npm run build` が通る。
 - 第3回ページが授業中に投影して操作できる状態になっている。
 - 既存ページの挙動が維持されている。
+
+## Phase 11: 第4回「よい平均の当て方はどれか」
+
+現在の公開順序は次を維持する。
+
+```text
+01: データはどこから来るのか
+02: 点から分布を読むゲーム
+03: 標本分布を理解する
+04: よい平均の当て方はどれか
+```
+
+対象ファイル:
+
+```text
+src/pages/04-estimator-quality.mdx
+src/components/widgets/EstimatorQualityWidget.tsx
+src/lib/probability/estimators.ts
+src/lib/probability/estimatorSimulation.ts
+docs/INTERACTION_SPEC_ESTIMATOR_QUALITY.md
+docs/THEORY_NOTES_ESTIMATOR_QUALITY.md
+docs/FILE_CHANGE_PLAN_ESTIMATOR_QUALITY.md
+docs/CODEX_PROMPT_ADD_ESTIMATOR_QUALITY.md
+```
+
+作業:
+
+1. 期待値 `E[X]` を推定する4つの方法を固定で実装する。
+2. 不偏性を「標本を取り直したときの中心」、一致性を「Nを大きくしたときの動き」として表示する。
+3. 学生向けの文書・UI・確認質問では `E[X]` を使い、ギリシャ文字のミューは使わない。
+4. `/04-estimator-quality/` を追加し、トップページとナビゲーションに導線を追加する。
+5. `npm run check`、`npm run build`、GitHub Pages想定のbase pathつきbuildを通す。
+
+完了条件:
+
+- 第4回ページが表示できる。
+- seed（種）が同じなら同じ標本、軌跡、標本を取り直した結果が再現される。
+- 第2回 `/02-guess-the-distribution/` と第3回 `/03-sampling-distribution/` のURLを変更していない。
