@@ -332,7 +332,7 @@ export default function EstimatorQualityWidget() {
       <div className="widget__header">
         <div>
           <p className="eyebrow">Estimator Quality</p>
-          <h2>よい平均の当て方はどれか</h2>
+          <h2>よい期待値の当て方はどれか</h2>
         </div>
         <p className="widget__message">
           目標は見えない期待値 E[X] です。不偏性は「標本を取り直したときの中心」、一致性は「Nを大きくしたときの動き」として比べます。

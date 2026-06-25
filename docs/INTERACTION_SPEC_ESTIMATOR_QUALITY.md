@@ -3,7 +3,7 @@
 ## 1. Page identity
 
 ```text
-Title: 第4回：よい平均の当て方はどれか
+Title: 第4回：よい期待値の当て方はどれか
 Route: /04-estimator-quality/
 Main component: EstimatorQualityWidget
 ```
@@ -14,7 +14,7 @@ Main component: EstimatorQualityWidget
 01: データはどこから来るのか
 02: 点から分布を読むゲーム
 03: 母集団分布と標本
-04: よい平均の当て方はどれか
+04: よい期待値の当て方はどれか
 ```
 
 Codexは第2回と第3回を入れ替えない。

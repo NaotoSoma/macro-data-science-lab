@@ -20,7 +20,7 @@
 第4回のタイトルは次です。
 
 ```text
-第4回：よい平均の当て方はどれか
+第4回：よい期待値の当て方はどれか
 ```
 
 期待値のターゲット表記は、授業では `E[X]` と教えています。
@@ -161,13 +161,13 @@ src/components/widgets/EstimatorQualityWidget.tsx
 
 ```mdx
 ---
-title: "第4回：よい平均の当て方はどれか"
+title: "第4回：よい期待値の当て方はどれか"
 description: "期待値 E[X] の複数の推定量を比較し、不偏性と一致性の違いを観察する"
 ---
 
 import EstimatorQualityWidget from "../components/widgets/EstimatorQualityWidget";
 
-# 第4回：よい平均の当て方はどれか
+# 第4回：よい期待値の当て方はどれか
 
 本当の期待値 `E[X]` は直接見えません。
 手元にある `N` 個のデータから、`E[X]` を当てる方法を比べます。
